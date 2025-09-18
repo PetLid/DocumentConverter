@@ -1,0 +1,29 @@
+- LegacyIdentifier: P
+  NewIdentifier: person
+  AttributeNames:
+    - firstname
+    - lastname
+  ChildLegacyIdentifiers:
+    - T
+    - A
+    - F
+- LegacyIdentifier: A
+  NewIdentifier: address
+  AttributeNames:
+    - street
+    - city
+    - zip
+- LegacyIdentifier: T
+  NewIdentifier: phone
+  AttributeNames:
+    - mobile
+    - landline
+- LegacyIdentifier: F
+  NewIdentifier: family
+  AttributeNames:
+    - name
+    - born
+  ChildLegacyIdentifiers:
+    - T
+    - A
+    - R
