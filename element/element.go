@@ -33,14 +33,6 @@ func (element *Normal) GetAttributeNames() []string {
 	return element.attributeNames
 }
 
-func (element *Normal) canBeParent() bool {
-	if element.childLegacyIdentifiers == nil {
-		return false
-	}
-
-	return len(element.childLegacyIdentifiers) > 0
-}
-
 type Root struct {
 	identifier string
 }
@@ -63,8 +55,4 @@ func (element *Root) CanBeParentOf(_ Definer) bool {
 
 func (element *Root) GetAttributeNames() []string {
 	return nil
-}
-
-func (element *Root) canBeParent() bool {
-	return true
 }

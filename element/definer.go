@@ -5,5 +5,4 @@ type Definer interface {
 	getLegacyIdentifier() string
 	CanBeParentOf(element Definer) bool
 	GetAttributeNames() []string
-	canBeParent() bool
 }
