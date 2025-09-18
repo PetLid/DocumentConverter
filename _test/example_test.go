@@ -30,13 +30,13 @@ T|073-101802|08-101802
 P|Boris|Johnson
 A|10 Downing Street|London`
 
-	converter := converter.Converter{
+	documentConverter := converter.Converter{
 		LineParser: &parser.SeparatorLineParser{Separator: "|", ElementDefinitions: exampleDefinitions},
 		Printer:    printer.NewXMLPrinter(),
 	}
 	scanner := bufio.NewScanner(strings.NewReader(exampleInput))
 
-	result, _ := converter.ConvertDocument(*element.NewRoot("people"), scanner)
+	result, _ := documentConverter.ConvertDocument(*element.NewRoot("people"), scanner)
 
 	approvals.VerifyString(t, result)
 }

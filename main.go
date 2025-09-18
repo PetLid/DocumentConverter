@@ -83,12 +83,12 @@ func convertFile(inputFileName string, definitions map[string]element.Definer) (
 		}
 	}(inputFile)
 
-	converter := converter.Converter{
+	documentConverter := converter.Converter{
 		LineParser: &parser.SeparatorLineParser{Separator: "|", ElementDefinitions: definitions},
 		Printer:    printer.NewXMLPrinter(),
 	}
 	scanner := bufio.NewScanner(inputFile)
-	result, err := converter.ConvertDocument(*element.NewRoot("people"), scanner)
+	result, err := documentConverter.ConvertDocument(*element.NewRoot("people"), scanner)
 
 	return err, result
 }
