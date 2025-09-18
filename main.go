@@ -59,7 +59,7 @@ func loadDefinitions(definitionsFile string) map[string]element.Definer {
 	}
 
 	if err := yaml.Unmarshal(definitionsYaml, &definitions); err != nil {
-		log.Fatalf("Could not parse definitions in file %s: %s", definitionsFile, err)
+		log.Fatalf("Could not unmarshall definitions in file %s: %s", definitionsFile, err)
 	}
 
 	mappedDefinitions := make(map[string]element.Definer, len(definitions))
