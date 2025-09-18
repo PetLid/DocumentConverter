@@ -32,7 +32,7 @@ func parseFlags() (string, string, string) {
 	flag.StringVar(&inputFileName, "input-file", "input", "file to convert")
 
 	var definitionsFileName string
-	flag.StringVar(&definitionsFileName, "definitions-file", "definitions.yaml", "JSON file with element definitions")
+	flag.StringVar(&definitionsFileName, "definitions-file", "definitions.yaml", "yaml file with element definitions")
 
 	var outputFileName string
 	flag.StringVar(&outputFileName, "output-file", "output.xml", "name of generated XML file")
