@@ -79,7 +79,7 @@ func convertFile(inputFileName string, definitions map[string]element.Definer) (
 	defer func(inputFile *os.File) {
 		err := inputFile.Close()
 		if err != nil {
-			log.Fatalf("Failed to close file %s, %s", "inputFile", err)
+			log.Fatalf("Failed to close file %s, %s", inputFileName, err)
 		}
 	}(inputFile)
 
